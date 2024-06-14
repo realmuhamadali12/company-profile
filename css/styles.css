@@ -1,0 +1,160 @@
+/* css/styles.css */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://www.trembesijepara.com/wp-content/uploads/2018/05/Perawatan-Furniture-Kayu-Trembesi.jpg');
+    background-size: cover; /* Mengatur gambar agar menutupi seluruh background */
+    background-repeat: no-repeat; /* Menghindari pengulangan gambar */
+    background-attachment: fixed; /* Membuat gambar tetap di tempat ketika scrolling */
+    /* Tambahan properti CSS lainnya */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Memberi transparansi pada background */
+    border-radius: 10px;
+}
+
+/* CSS untuk elemen-elemen lainnya */
+
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 1em;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+#hero {
+    background: #f4f4f4;
+    padding: 2em 0;
+    text-align: center;
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
+
+#products .product {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1em;
+    text-align: center;
+    width: calc(33% - 2em);
+    box-sizing: border-box;
+}
+
+#products .product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label, form input, form textarea, form button {
+    margin: 0.5em 0;
+}
+
+.owner {
+    display: flex;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.owner img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-right: 1em;
+}
+
+.owner-info {
+    max-width: 600px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header nav ul li {
+        display: block;
+        margin: 0.5em 0;
+    }
+    #products .product {
+        width: calc(50% - 2em);
+    }
+    .owner {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .owner img {
+        margin-bottom: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    #products .product {
+        width: 100%;
+    }
+}
+
+/* Penambahan gaya untuk pesan konfirmasi */
+.alert {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    margin: 15px 0;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Animasi untuk pesan konfirmasi */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slideIn {
+    animation: slideIn 0.5s ease-out;
+}
